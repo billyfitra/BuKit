@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudayaKita</title>
+    <link rel="stylesheet" href="./src/style/home.css">
+</head>
+<body>
+    <!--Navigation-->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="brand">BudayaKita</a>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="./src/template/gallery.html">Galeri</a>
+                <a href="#" onclick="showAlert()">Blog</a>
+                <a href="./src/template/about.html">About Us</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </nav>
+
+    <!--Hero-->
+    <div class="hero">
+        <div class="slides-container">
+            <div class="slide fade">
+                <img src="https://asset.kompas.com/crops/S4vMEi5ys7_VpBhl7evBp2LK-w8=/0x399:5184x3855/750x500/data/photo/2022/03/12/622c4bca89bca.jpg" alt="Seni Pertunjukan 1">
+                <div class="hero-content">
+                    <h1>BudayaKita</h1>
+                    <p>Melestarikan Seni Pertunjukan Indonesia</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="https://asset.kompas.com/crops/82wdC77rsHiU4GJYrS_7_Zgln_8=/2x0:800x532/750x500/data/photo/2022/09/08/631969c54093a.jpg" alt="Seni Pertunjukan 2">
+                <div class="hero-content">
+                    <h1>BudayaKita</h1>
+                    <p>Menjaga Warisan Budaya</p>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="https://asset.kompas.com/crops/XlJsw88ekudopPikTV-gvW61pIg=/6x0:800x529/750x500/data/photo/2022/09/08/63196219761db.jpg" alt="Seni Pertunjukan 3">
+                <div class="hero-content">
+                    <h1>BudayaKita</h1>
+                    <p>Mengenal Ragam Seni Pertunjukan</p>
+                </div>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!--About Section-->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="../asset/img/about.jpeg" alt="Seni Pertunjukan">
+            </div>
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>Kami adalah platform yang didedikasikan untuk melestarikan dan mempromosikan seni pertunjukan Indonesia. Tim kami terdiri dari pecinta budaya dan profesional yang berdedikasi untuk menjaga warisan budaya Indonesia.</p>
+                <p>Melalui website ini, kami berharap dapat memperkenalkan berbagai macam seni pertunjukan dari seluruh Indonesia, memberikan informasi terkini, serta menyediakan platform bagi para seniman untuk berbagi karya mereka.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!--Galeri Section-->
+    <section class="gallery" id="gallery">
+        <div class="gallery-container">
+            <h2>Galeri Seni Pertunjukan</h2>
+            <div class="gallery-slides">
+                <div class="gallery-slide">
+                    <img src="https://www.ngopibareng.id/images/uploads/2022/2022-01-14/tari-kecak-merajut-asa-menuai-mimpi-pulihkan-wisata-di-bali--thumbnail-252" alt="Seni Pertunjukan 1">
+                    <p>Tari Kecak</p>
+                </div>
+                <div class="gallery-slide">
+                    <img src="https://img.freepik.com/free-vector/gradient-paper-design-with-tribal-puppet-design_52683-79140.jpg?t=st=1717474048~exp=1717477648~hmac=0105c47939e5b415563b72e6ca54775e6105cae0179fb44a1c09720a08bf2689&w=996" alt="Seni Pertunjukan 2">
+                    <p>Wayang Kulit</p>
+                </div>
+                <div class="gallery-slide">
+                    <img src="https://i.pinimg.com/564x/6f/b6/b5/6fb6b511af876e548d37ac46888e484c.jpg" alt="Seni Pertunjukan 3">
+                    <p>Reog Ponorogo</p>
+                </div>
+                <div class="gallery-slide">
+                    <img src="https://i.pinimg.com/564x/94/2e/04/942e04f44d6ae54607c47607dcc43220.jpg" alt="Seni Pertunjukan 4">
+                    <p>Tari Piring</p>
+                </div>
+            </div>
+            <div class="gallery-nav">
+                <a class="prev" onclick="plusGallerySlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusGallerySlides(1)">&#10095;</a>
+            </div>
+            <div class="gallery-button">
+                <a href="gallery.html" class="btn">Lihat Selengkapnya</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Blog Section-->
+    <section class="blog" id="blog">
+        <div class="blog-container">
+            <h2>Berita dan Event Seni Pertunjukan</h2>
+            <div class="blog-slides">
+                <div class="blog-slide">
+                    <img src="https://www.ngopibareng.id/images/uploads/2022/2022-01-14/tari-kecak-merajut-asa-menuai-mimpi-pulihkan-wisata-di-bali--thumbnail-252" alt="Berita 1">
+                    <div class="blog-content">
+                        <h3>Festival Tari Bali</h3>
+                        <p>Festival Tari Bali akan diselenggarakan di Denpasar pada bulan Juli mendatang. Acara ini akan menampilkan berbagai tarian tradisional dari seluruh Bali.</p>
+                    </div>
+                </div>
+                <div class="blog-slide">
+                    <img src="https://img.freepik.com/free-vector/gradient-paper-design-with-tribal-puppet-design_52683-79140.jpg?t=st=1717474048~exp=1717477648~hmac=0105c47939e5b415563b72e6ca54775e6105cae0179fb44a1c09720a08bf2689&w=996" alt="Berita 2">
+                    <div class="blog-content">
+                        <h3>Pentas Wayang Kulit</h3>
+                        <p>Pentas Wayang Kulit akan diadakan di Yogyakarta, menampilkan lakon Mahabharata dengan dalang terkenal Ki Manteb Sudarsono.</p>
+                    </div>
+                </div>
+                <div class="blog-slide">
+                    <img src="https://i.pinimg.com/564x/f2/b6/c6/f2b6c698e6c749236897f43ae68307af.jpg" alt="Berita 3">
+                    <div class="blog-content">
+                        <h3>Kompetisi Tari Jaipong</h3>
+                        <p>Kompetisi Tari Jaipong tingkat nasional akan diadakan di Bandung, mengundang penari dari seluruh Indonesia untuk berkompetisi.</p>
+                    </div>
+                </div>
+                <div class="blog-slide">
+                    <img src="https://i.pinimg.com/236x/3c/76/f4/3c76f413763f33e908763f55284ffe3b.jpg" alt="Berita 4">
+                    <div class="blog-content">
+                        <h3>Konser Musik Tradisional</h3>
+                        <p>Konser Musik Tradisional akan diadakan di Surabaya, menampilkan gamelan dan musik tradisional lainnya.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-nav">
+                <a class="prev" onclick="plusBlogSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusBlogSlides(1)">&#10095;</a>
+            </div>
+            <div class="blog-button">
+                <a href="#" class="btn">Lihat Selengkapnya</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer Section-->
+    <footer>
+        <div class="footer-container">
+                <p>© 2024 BudayaKita. C624-PR161.</p>
+        </div>
+    </footer>
+
+    <!-- Alert -->
+    <div id="alert" class="alert">
+        <span class="closebtn" onclick="closeAlert()">&times;</span> 
+        Fitur blog sedang dalam pengembangan. Terima kasih atas pengertiannya.
+    </div>
+
+    <script src="./src/script/home.js"></script>
+</body>
+</html>
