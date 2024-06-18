@@ -1,0 +1,459 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5DC; /* Putih Gading */
+}
+
+.navbar {
+    background-color: #B7410E; /* Merah Bata */
+    color: #F5F5DC; /* Putih Gading */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    z-index: 10;
+    position: relative;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar .brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: #F5F5DC;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #F5F5DC;
+    font-size: 16px;
+}
+
+.navbar .nav-links a:hover {
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.navbar .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Alert */
+.alert {
+    padding: 20px;
+    background-color: #B7410E;
+    color: #F5F5DC;
+    opacity: 0;
+    transition: opacity 0.6s, transform 0.6s;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 1000;
+    width: 300px;
+    border-radius: 10px;
+    display: none;
+    transform: translateY(-20px);
+}
+
+.alert.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mengubah properti ini menjadi cover untuk memastikan gambar menutupi seluruh kontainer */
+    object-position: center;
+}
+
+.slides-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide {
+    flex: 1;
+    display: none;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F5F5DC;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+}
+
+.hero-content p {
+    font-size: 24px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #F5F5DC;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 2;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px 20px;
+    background-color: #F5F5DC;
+    text-align: center;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.gallery-slides {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-slide {
+    min-width: 33.33%;
+    box-sizing: border-box;
+    padding: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.gallery-slide p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.gallery-nav {
+    position: relative;
+    top: -50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-nav .prev, .gallery-nav .next {
+    cursor: pointer;
+    color: #B7410E;
+    font-weight: bold;
+    font-size: 24px;
+    user-select: none;
+}
+
+.gallery-button {
+    margin-top: 20px;
+}
+
+.gallery-button .btn {
+    text-decoration: none;
+    color: #F5F5DC;
+    background-color: #B7410E;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Blog Section */
+.blog {
+    padding: 50px 20px;
+    background-color: #F5F5DC;
+    text-align: center;
+}
+
+.blog-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.blog-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.blog-slides {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.blog-slide {
+    min-width: 33.33%;
+    box-sizing: border-box;
+    padding: 10px;
+    transition: transform 0.5s ease-in-out;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.blog-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.blog-content p {
+    font-size: 16px;
+    color: #333;
+}
+
+.blog-nav {
+    position: relative;
+    top: -50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-nav .prev, .blog-nav .next {
+    cursor: pointer;
+    color: #B7410E;
+    font-weight: bold;
+    font-size: 24px;
+    user-select: none;
+}
+
+.blog-button {
+    margin-top: 20px;
+}
+
+.blog-button .btn {
+    text-decoration: none;
+    color: #F5F5DC;
+    background-color: #B7410E;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #B7410E; /* Warna latar belakang merah bata */
+    color: #F5F5DC; /* Warna teks beige */
+    text-align: center; /* Teks di tengah */
+    padding: 15px 10px; /* Padding atas-bawah 20px, kiri-kanan 10px */
+    font-family: 'Open Sans', sans-serif; /* Font keluarga */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Bayangan di atas footer */
+    border-top: 3px solid #FFECD1; /* Batas atas dengan warna lebih terang */
+}
+
+.footer-container {
+    max-width: 1200px; /* Lebar maksimum kontainer */
+    margin: 0 auto; /* Pusatkan kontainer di tengah */
+    font-size: 16px; /* Ukuran font */
+}
+
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #B7410E;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 5px;
+        z-index: 10;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+        padding: 8px;
+    }
+
+    .navbar .hamburger {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image, .about-content {
+        flex: none;
+        width: 100%;
+    }
+
+    .about-image img {
+        max-width: 80%;
+    }
+
+    .gallery-slide {
+        min-width: 100%;
+    }
+
+    .gallery-nav {
+        top: -30px;
+    }
+
+    .blog-slide {
+        min-width: 100%;
+    }
+
+    .blog-nav {
+        top: -30px;
+    }
+
+    .footer-container {
+        font-size: 18px; /* Ukuran font lebih besar pada layar lebar */
+    }
+}

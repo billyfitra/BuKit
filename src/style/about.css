@@ -1,0 +1,189 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F5DC;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #B7410E; /* Merah Bata */
+    color: #F5F5DC; /* Putih Gading */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar .brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: #F5F5DC;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #F5F5DC;
+    font-size: 16px;
+}
+
+.navbar .nav-links a:hover {
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.navbar .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Alert */
+.alert {
+    padding: 20px;
+    background-color: #B7410E;
+    color: #F5F5DC;
+    opacity: 0;
+    transition: opacity 0.6s, transform 0.6s;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 1000;
+    width: 300px;
+    border-radius: 10px;
+    display: none;
+    transform: translateY(-20px);
+}
+
+.alert.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.about-us-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-us-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-us-section h1 {
+    color: #B7410E;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-us-section p {
+    color: #333;
+    font-size: 18px;
+}
+
+.founders-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.founders-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.founders-section h2 {
+    color: #B7410E;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.founder {
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.founder img {
+    width: 200px;
+    height: auto;
+    border-radius: 20%;
+}
+
+.founder h3 {
+    color: #B7410E;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.founder p {
+    color: #333;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #B7410E; /* Warna latar belakang merah bata */
+    color: #F5F5DC; /* Warna teks beige */
+    text-align: center; /* Teks di tengah */
+    padding: 15px 10px; /* Padding atas-bawah 20px, kiri-kanan 10px */
+    font-family: 'Open Sans', sans-serif; /* Font keluarga */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Bayangan di atas footer */
+    border-top: 3px solid #FFECD1; /* Batas atas dengan warna lebih terang */
+}
+
+.footer-container {
+    max-width: 1200px; /* Lebar maksimum kontainer */
+    margin: 0 auto; /* Pusatkan kontainer di tengah */
+    font-size: 16px; /* Ukuran font */
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #B7410E;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 5px;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+        padding: 8px;
+    }
+
+    .navbar .hamburger {
+        display: block;
+    }
+}

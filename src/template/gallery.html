@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri BudayaKita</title>
+    <link rel="stylesheet" href="../style/gallery.css">
+</head>
+<body>
+    <!--Navigation-->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="brand">BudayaKita</a>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="#">Galeri</a>
+                <a href="#" onclick="showAlert()">Blog</a>
+                <a href="about.html">About Us</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </nav>
+
+    <!--Gallery Section-->
+    <section class="gallery-section">
+        <h1>Galeri Seni Pertunjukan Indonesia</h1>
+        <input type="text" id="search-input" placeholder="Cari seni pertunjukan..." oninput="filterGallery()">
+        <div class="gallery-container" id="gallery-container">
+            <!-- Item galeri akan ditambahkan di sini oleh JavaScript -->
+        </div>
+    </section>
+
+    <!--Footer Section-->
+    <footer>
+        <div class="footer-container">
+            <p>© 2024 BudayaKita. C624-PR161.</p>
+        </div>
+    </footer>
+
+    <!-- Alert -->
+    <div id="alert" class="alert">
+        <span class="closebtn" onclick="closeAlert()">&times;</span> 
+        Fitur blog sedang dalam pengembangan. Terima kasih atas pengertiannya.
+    </div>
+
+    <script
+        src="../script/gallery.js">
+    </script>
+</body>
+</html>

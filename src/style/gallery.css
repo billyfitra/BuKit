@@ -1,0 +1,214 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5DC; /* Putih Gading */
+}
+
+.navbar {
+    background-color: #B7410E; /* Merah Bata */
+    color: #F5F5DC; /* Putih Gading */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar .brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: #F5F5DC;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #F5F5DC;
+    font-size: 16px;
+}
+
+.navbar .nav-links a:hover {
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.navbar .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Alert */
+.alert {
+    padding: 20px;
+    background-color: #B7410E;
+    color: #F5F5DC;
+    opacity: 0;
+    transition: opacity 0.6s, transform 0.6s;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 1000;
+    width: 300px;
+    border-radius: 10px;
+    display: none;
+    transform: translateY(-20px);
+}
+
+.alert.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+/* Gallery */
+.gallery-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gallery-section h1 {
+    font-size: 36px;
+}
+
+.gallery-container {
+    display: flex;
+    padding-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card h2 {
+    margin: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Search Input */
+#search-input {
+    width: 50%;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 16px;
+    border: 2px solid #B7410E;
+    border-radius: 5px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #B7410E; /* Warna latar belakang merah bata */
+    color: #F5F5DC; /* Warna teks beige */
+    text-align: center; /* Teks di tengah */
+    padding: 15px 10px; /* Padding atas-bawah 20px, kiri-kanan 10px */
+    font-family: 'Open Sans', sans-serif; /* Font keluarga */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Bayangan di atas footer */
+    border-top: 3px solid #FFECD1; /* Batas atas dengan warna lebih terang */
+}
+
+.footer-container {
+    max-width: 1200px; /* Lebar maksimum kontainer */
+    margin: 0 auto; /* Pusatkan kontainer di tengah */
+    font-size: 16px; /* Ukuran font */
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 20px);
+    }
+
+    #search-input {
+        width: 80%;
+    }
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #B7410E;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 5px;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+        padding: 8px;
+    }
+
+    .navbar .hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-right {
+        display: none;
+    }
+
+    .navbar-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    #search-input {
+        width: 100%;
+    }
+}

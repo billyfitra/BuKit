@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Seni Pertunjukan - BudayaKita</title>
+    <link rel="stylesheet" href="../style/detail.css">
+</head>
+<body>
+
+<!--Navigation-->
+<nav class="navbar">
+    <div class="container">
+        <a href="#" class="brand">BudayaKita</a>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="gallery.html">Galeri</a>
+            <a href="#" onclick="showAlert()">Blog</a>
+            <a href="about.html">About Us</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </div>
+</nav>
+
+<!-- Button to go back to Gallery Page -->
+<div class="back-button-container">
+    <a href="gallery.html" class="back-button">&#8592; Kembali ke Halaman Galeri</a>
+</div>
+
+<!-- Detail Section -->
+<section class="detail-section">
+    <div class="container">
+        <h2 id="namaSeni" class="detail-title"></h2>
+        <p id="daerahSeni" class="detail-region"></p>
+        <div class="detail-content">
+            <div class="detail-video">
+                <iframe id="videoLink" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="detail-info">
+                <p id="deskripsiSeni" class="detail-description">
+                    </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Alert -->
+<div id="alert" class="alert">
+    <span class="closebtn" onclick="closeAlert()">&times;</span> 
+    Fitur blog sedang dalam pengembangan. Terima kasih atas pengertiannya.
+</div>
+
+<script src="../script/detail.js"></script>
+</body>
+</html>
